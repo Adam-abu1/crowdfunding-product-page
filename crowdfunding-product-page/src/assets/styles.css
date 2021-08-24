@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Commissioner';
+    src: url('./fonts/Commissioner-Medium.ttf') format('truetype');
+}
+
+body {
+    font-family: Commissioner, sans-serif;
+}

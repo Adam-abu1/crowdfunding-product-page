@@ -1,10 +1,10 @@
 <template>
 	<main id="ProjectDescription" class="main-card">
 		<h3 class="bold-weight">About this project</h3>
-		<p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your
-			screen to a more comfortable viewing height. Placing your monitor at eye level has the
-			potential to improve your posture and make you more comfortable while at work, helping
-			you stay focused on the task at hand.</p>
+		<p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
+			that elevates your screen to a more comfortable viewing height.
+			Placing your monitor at eye level has the potential to improve your posture
+			and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
 		<p>
 			Featuring artisan craftsmanship, the simplicity of design creates
 			extra desk space below your computer to allow notepads, pens,
@@ -21,5 +21,11 @@ export default {
 </script>
 
 <style scoped>
+main {
+	text-align: left;
+}
 
+p {
+	font-size: 0.9rem;
+}
 </style>

@@ -28,8 +28,22 @@ export default {
 </script>
 
 <style scoped>
+nav {
+	margin-bottom: 10em;
+	display: flex;
+	justify-content: space-between;
+	color: #FFF;
+}
 
+ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
 li {
-	color: #FFF
+	list-style-type: none;
+	padding: 0 0.7em;
+	display: inherit;
+	align-items: center;
 }
 </style>
