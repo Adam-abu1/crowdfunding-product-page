@@ -10,19 +10,66 @@
 			extra desk space below your computer to allow notepads, pens,
 			and USB sticks to be stored under the stand.
 		</p>
-		<PledgeCards></PledgeCards>
+		<Pledge
+			v-for="pledge in pledges"
+			:key="pledge.pledgeTitle"
+			:pledge-title="pledge.pledgeTitle"
+			:pledges-available="pledge.pledgesAvailable"
+			:pledge-cost="pledge.pledgeCost"
+			:pledge-reward="pledge.pledgeReward"
+		></Pledge>
+		<Modal
+			:pledges="pledges"
+		></Modal>
 	</main>
 </template>
 
 <script>
+import Pledge from '@/components/Pledge';
+import Modal from '@/components/Modal';
+
 export default {
 	name: 'ProjectDescription',
+	components: {
+		Pledge,
+		Modal,
+	},
+	data() {
+		return {
+			pledges: [
+				{
+					pledgeTitle: 'Bamboo Stand',
+					pledgesAvailable: 101,
+					pledgeCost: 25,
+					pledgeReward: `You get an ergonomic stand made of natural bamboo.
+					You've helped us launch our promotional campaign, and
+					you’ll be added to a special Backer member list.`,
+				},
+				{
+					pledgeTitle: 'Black Edition Stand',
+					pledgesAvailable: 64,
+					pledgeCost: 75,
+					pledgeReward: `You get a Black Special Edition computer stand and a personal thank you.
+					You’ll be added to our Backer member list. Shipping is included.`,
+				},
+				{
+					pledgeTitle: 'Mahogany Special Edition',
+					pledgesAvailable: 0,
+					pledgeCost: 200,
+					pledgeReward: `You get two Special Edition Mahogany stands, a Backer T-Shirt,
+					and a personal thank you. You’ll be added to our Backer member list. Shipping is included.`,
+				},
+			],
+		};
+	},
 };
 </script>
 
 <style scoped>
 main {
 	text-align: left;
+	line-height: var(--line-height);
+	display: grid;
 }
 
 p {

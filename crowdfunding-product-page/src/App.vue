@@ -81,6 +81,7 @@ export default {
 
 body {
 	font-family: Commissioner, sans-serif;
+	font-size: 16px;
 	background-image: url('./assets/images/image-hero-desktop.jpg');
 	background-repeat:no-repeat;
 	background-color: #f8f8f8;
@@ -89,8 +90,9 @@ body {
 
 p {
 	color: #7a7a7a;
-	font-weight: 400;
+	font-weight: var(--fw-n);
 	font-size: 0.9rem;
+	line-height: var(--line-height);
 }
 
 #app {
@@ -105,19 +107,40 @@ p {
 	row-gap: 2em;
 }
 
+:root {
+	--moderate-cyan: #74c2bd;
+	--dark-cyan: #147B74;
+	--dark-gray: #7A7A7A;
+	--lighter-gray: #e8e2e2;
+	--black: #000;
+	--white: #FFF;
+
+	--fw-n: 400;
+	--fw-m: 500;
+	--fw-b: 700;
+
+	--mobile-breakpoint: 375px;
+	--desktop-max: 1440px;
+
+	--button-border-radius: 21px;
+	--card-border-radius: 5px;
+
+	--line-height:  1.7;
+}
+
 .main-card {
 	background-color: #FFFFFF;
-	border-radius: 5px;
-	padding: 1.5em;
+	border-radius: var(--card-border-radius);
+	padding: 1.5em 3em;
 	margin: 0 19%;
 }
 
 button {
 	margin: 1em 5em;
-	border-radius: 21px;
-	background-color: #74c2bd;
+	border-radius: var(--button-border-radius);
+	background-color: var(--moderate-cyan);
 	border: none;
-	font-weight: 700;
-	color: #FFFFFF;
+	font-weight: var(--fw-b);
+	color: var(--white);
 }
 </style>
