@@ -1,7 +1,6 @@
 <template>
 	<section  id="Modal">
-		<div class="dark-overlay"></div>
-		<div :class="[pledgeCompleted ? '' :  'pledge-incomplete']">
+		<div :class="[pledgeCompleted ? '' :  'pledge-incomplete', 'main-card']">
 			<h3>Back this project</h3>
 			<p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 			<ModalPledge></ModalPledge>
@@ -32,12 +31,17 @@ export default {
 <style scoped>
 	section {
 		position: absolute;
-		top: 50%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		background-color: rgba(0,0,0,0.5);;
+		display: grid;
+		place-content: center;
 	}
-	.dark-overlay {
-		height: 100vh;
-		width: 100vw;
-		opacity: 0.3;
-		background-color: var(--black);
+
+	.main-card {
+		margin: 0;
 	}
 </style>

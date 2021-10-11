@@ -18,21 +18,16 @@
 			:pledge-cost="pledge.pledgeCost"
 			:pledge-reward="pledge.pledgeReward"
 		></Pledge>
-		<Modal
-			:pledges="pledges"
-		></Modal>
 	</main>
 </template>
 
 <script>
 import Pledge from '@/components/Pledge';
-import Modal from '@/components/Modal';
 
 export default {
 	name: 'ProjectDescription',
 	components: {
 		Pledge,
-		Modal,
 	},
 	data() {
 		return {

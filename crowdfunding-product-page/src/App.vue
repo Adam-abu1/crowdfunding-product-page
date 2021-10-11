@@ -4,6 +4,7 @@
 		<TitleCard/>
 		<PledgeTracker/>
 		<ProjectDescription/>
+		<Modal/>
 	</div>
 </template>
 
@@ -12,6 +13,7 @@ import NavBar from '@/components/NavBar';
 import TitleCard from '@/components/TitleCard';
 import PledgeTracker from '@/components/PledgeTracker';
 import ProjectDescription from '@/components/ProjectDescription';
+import Modal from '@/components/Modal';
 
 export default {
 	name: 'App',
@@ -20,6 +22,7 @@ export default {
 		TitleCard,
 		PledgeTracker,
 		ProjectDescription,
+		Modal,
 	},
 };
 </script>
